@@ -9,7 +9,8 @@ var ProductCard = function(props) {
   }
   var handleItemClick = (event) => {
     var itemId = event.target.dataset.itemnum;
-    props.appClick(itemId);
+    var itemName = event.target.innerText;
+    props.appClick(itemId, itemName);
   }
 
   var getImage = function() {
@@ -34,10 +35,10 @@ var ProductCard = function(props) {
   }
 
   if (props.product === undefined) {
-    return <div key={generateId()} className='carousel item product-card'></div>;
+    return <div key={generateId()} className='carousel item outfit-card'></div>;
   }
   return (
-      <div key={generateId()} className='carousel item product-card'>
+      <div key={generateId()} className='carousel item outfit-card'>
         <span id='remove' className="action fa fa-times"
           onClick={handleActionClick} data-itemnum={props.product.id}></span>
         <div>
@@ -47,7 +48,7 @@ var ProductCard = function(props) {
         <b onClick={handleItemClick} data-itemnum={props.product.id}>
           {props.product.name}
         </b>
-        <p>{props.product.default_price}</p>
+        <p>${props.product.default_price}</p>
         <StarsDisplay starsData={parseFloat(props.ratings)}/>
       </div>
   )
