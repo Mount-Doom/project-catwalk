@@ -55,6 +55,7 @@ class Modal extends React.Component {
         console.log(res);
       }
     });
+    location.reload();
   }
 
   handleClick(starsFormData) {
