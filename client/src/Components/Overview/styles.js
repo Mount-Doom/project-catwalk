@@ -1,10 +1,9 @@
 export default {
   overview: {
-    display: "flex",
+    // display: "flex",
     backgroundColor: "white",
-    height: "100vh",
     flexDirection: "column",
-    // fontFamily: "Montserrat sans-serif"
+    fontFamily: "Montserrat"
   },
   toggle: {
     position: "absolute",
@@ -21,7 +20,8 @@ export default {
     border: '1px solid black',
     display: 'block',
     fontSize: '20px',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: "Montserrat"
   },
   errorMsg: {
     color: "red",
@@ -41,11 +41,13 @@ export default {
     fontSize: '20px',
     fontWeight: 'bold',
     textAlign: 'center',
-    lineHeight: '50px'
+    lineHeight: '50px',
+    fontFamily: "Montserrat"
   },
   row: {
     display: "flex",
-    flexDirection: "row"
+    flexDirection: "row",
+    justifyContent: "space-evenly"
   },
   rating:{
 
@@ -91,8 +93,8 @@ export default {
   },
   productInfo: {
     padding: "20px",
-    width: "50%",
-    display: "block"
+    width: "40%",
+    // display: "block"
   },
   productStyle: {
     display: "flex",
@@ -115,22 +117,25 @@ export default {
     backgroundColor: "transparent",
     height: "30px",
     width: "auto",
-    margin: "10px"
+    margin: "10px",
+    fontFamily: "Montserrat",
+    fontWeight: 'bold',
   },
   productDetails: {
-    margin: "20px"
+    margin: "20px",
+    marginBottom: "8%"
   },
   carouselOverrides: {
     container: {
       display: "flex",
       flexDirection: "row",
       height: "400px",
-      width: "150%",
+      width: "600px",
       justifyContent: "space-between"
     },
     image: {
-      height: "250px",
-      width: "95%",
+      height: "350px",
+      width: "300px",
       background: "center"
     },
     rightArrow: {
